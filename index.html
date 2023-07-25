@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+        body{
+            background: linear-gradient(120deg, rgb(100, 48, 48),rgb(46, 175, 235));
+        }
+        section{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 4000px;
+            height: 600px;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+        }
+        .image{
+            width: 100%;
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .controls{
+            width: 100%;
+            height: 60%;
+            background-color: rgb(8, 19, 122);
+            padding: 15px;
+        }
+        .buttonCar{
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            border: none;
+            color: transparent;
+            border: 1px solid black;
+        }
+        #spanCar{
+            width: 32px;
+            height: 15px;
+            padding: 0px 5px 0px 0px;
+            background-color: red;
+            font-weight: 9000;
+            color: white;
+            border-radius: 3px;
+        }
+        .list{
+            padding-right: 25px;
+            font-size: 15px;
+            font-weight: 800;
+            color: rgb(223, 217, 217);
+
+        }
+        .addToCart{
+            margin: 25px;
+            width: 70%;
+            height: 7vh;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border-radius: 18px;
+            border: none;
+            font-size: large;
+            font-weight: 800;
+        }
+        .addToCart:hover{
+            background-color: rgba(3, 75, 35, 0.205);
+            color: white;
+            transition: .7s;
+        }
+        #Green:hover{
+            background-color: rgb(2, 97, 49)!important;
+            transition: .7s;
+        }
+        #Blue:hover{
+            background-color: rgb(10, 12, 129)!important;
+            transition: .7s;
+        }
+        #black:hover{
+            background-color: rgb(0, 0, 0)!important;
+            transition: .7s;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="image">
+                <img src="https://imgd.aeplcdn.com/370x208/n/0e7ju3a_1590675.jpg?q=75" id="img">
+            </div>
+            <div class="controls">
+                <p id="spanCar">cars</p>
+                <h1 style="padding: 10px; font-size: 28px; color: white; font-weight: 900;">Audi A8(Colors)</h1>
+                <p class="list">🚗 Mileage: 8km/ltre</p>
+                <p class="list">⛽ Fuel Type: Petrol</p>
+                <p class="list">⛽ Engine: 1984 cc</p>
+                <p class="list">⛽ Top Speed : 247km/hr</p><br>
+                <p class="list">Rating: ⭐⭐⭐⭐⭐</p><br><br>
+                <h3 style="color: white; font-weight: 900;">Pick a Color</h3><br>
+                <button onclick="green()" id="red" class="buttonCar" style="background-color: rgb(30, 48, 2);">Green</button>
+                <button onclick="blue()" id="blue" class="buttonCar" style="background-color: rgb(10, 12, 129);">blue</button>
+                <button onclick="black()" id="black" class="buttonCar" style="background-color: rgb(0, 0, 0);">black</button>
+                <button class="addToCart">Proceed to checkout</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        green = () => document.getElementById("img").setAttribute("src", "https://imgd.aeplcdn.com/370x208/n/896ju3a_1590679.jpg?q=75")
+        blue = () => document.getElementById("img").setAttribute("src", "https://imgd.aeplcdn.com/370x208/n/xvnju3a_1590677.jpg?q=75")
+        black = () => document.getElementById("img").setAttribute("src", "https://imgd.aeplcdn.com/370x208/n/4jtju3a_1590685.jpg?q=75")
+    </script>
+</body>
+</html>
